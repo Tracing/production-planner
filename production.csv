@@ -1,0 +1,8 @@
+recipe_name,output_commodity,input_commodity,input_amount,max_output
+steel,steel,iron,2,1000
+steel,steel,coal,1,1000
+burger,burger,bread,2,-1
+burger,burger,meat,1,-1
+sell_burger,money,burger,0.001,-1
+sell_steel,money,steel,0.00001,-1
+sell_meat,money,meat,0.1,-1

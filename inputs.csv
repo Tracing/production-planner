@@ -1,0 +1,5 @@
+commodity_name,amount,is_inflow
+iron,2,0
+coal,2,0
+bread,40,0
+meat,100,0
