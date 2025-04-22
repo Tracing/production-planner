@@ -10,7 +10,7 @@ python3 (3.12 but most versions should work)
 scipy
 numpy
 
-#Usage
+# Usage
 
 usage: main.py [-h]
                production_file inputs_file outputs_file
