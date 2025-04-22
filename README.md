@@ -1,22 +1,22 @@
-Production planner
+# Production Planner
 
 This is a production planner. It takes a list of all of all materials available, what materials can be combined to produce other materials and a list of requirements of all materials to be in
 the system at the end of the plan. It also has optimization targets to create plan that optimize the amount of certain numbers of resources at the end of the plan.
 
 It frames the data as a linear programming algorithm and solves it to optimize and create a production plan.
 
-##Requirements
+# Requirements
 python3 (3.12 but most versions should work)
 scipy
 numpy
 
-##Usage
+#Usage
 
 usage: main.py [-h]
                production_file inputs_file outputs_file
                commodity_importance_file time_peroid
 
-##Example
+# Example
 
 python3 production_planner.py production.csv inputs.csv outputs.csv commodity_importance.csv 0
 
@@ -60,7 +60,7 @@ Final State
     money: 0.0000 -> 110800.0000
     steel: 0.0000 -> 0.0000
 
-##File Format
+# File Formats
 
 production_file - a csv file of all production recipes (combinations of materials that can be combined to produce other materials)
 
@@ -73,7 +73,7 @@ make as many of good X as you can, ect...
 
 time_peroid - An integer representing the time period over which the plan runs (can be left blank to ignore all inflows and outflows of materials with respect to time)
 
-production_file format
+# Production File
 
 A production_file is a csv file where each group of lines describes one recipe. A recipe is a possible way of combining commodities to produce other commodities. Each input good used to produce an output good in a given recipe consumes one line. Multiple recipes can produce the same output good.
 
@@ -89,7 +89,7 @@ burger,burger,meat,1,-1
 
 2 pieces of bread and 1 piece of meat can be combined to produce 1 burger. This recipe can be done unlimited times.
 
-inputs_file format
+# Input Goods File
 
 commodity_name,amount,is_inflow
 
@@ -103,7 +103,7 @@ meat,100,0
 
 The program has 40 slices of bread and 100 pieces of meat to use at the start of the program.
 
-outputs_file format
+# Output Goods File
 
 commodity_name,amount,is_outflow
 
@@ -115,6 +115,8 @@ Example:
 burger,10,0
 
 The plan produced must include at least 10 burgers.
+
+# Commodity Importance File
 
 commodity_importance_file format
 
